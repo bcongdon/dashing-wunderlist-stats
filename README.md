@@ -31,7 +31,7 @@ To get stats from Wunderlist, you have to create an app on the Wunderlist [Devel
 **For all widgets:** Copy `wunderlist_stats.rb` into your `jobs/` folder.
 
 ### *Tasks Completed Today* Widget
-Add this widget to one of your dashboards `.erb` files.
+Add this widget to one of your dashboard `.erb` files.
 ```erb
 <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
   <div data-id="wunderlist_completed_today" data-view="Number" data-title="Wunderlist" data-moreinfo="Tasks Completed Today" style="background-color:#dd4c39"></div>
@@ -40,7 +40,13 @@ Add this widget to one of your dashboards `.erb` files.
 
 ![Tasks Completed Today Widget](img/tasks_completed_today.png)
 
-**~More to come~**
-<!-- ### *Tasks Completed This Week* Widget
+### *Tasks Completed This Week* Widget
 1. Install jorgemorgado's [dashing-barchart](https://github.com/jorgemorgado/dashing-barchart)
-2. Add this widget to one of your dashboards. -->
+    * *Note:* You must use a version 1.x of Chart.js. I suggest using the `Chart.min.js` from [this](https://github.com/chartjs/Chart.js/releases/tag/v1.1.1) release.
+2. Add this widget to one of your dashboard `.erb` files.
+```erb
+<li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+  <div data-id="wunderlist_last_week" data-view="BarChart" data-title="Wunderlist" style="background-color:#dd4c39"></div>
+</li>
+```
+![Tasks Completed Today Widget](img/last_weeks_task.png)
